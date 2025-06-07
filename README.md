@@ -4,7 +4,7 @@
 
 ## ⚠️ 免责声明
 
-本免责声明适用于 GitHub 上的 “edgetunnel” 项目（以下简称“本项目”），项目链接为：https://github.com/cmliu/edgetunnel 。
+本免责声明适用于 GitHub 上的 “edgetunnel” 项目（以下简称“本项目”） 。
 
 ### 用途
 本项目仅供教育、研究和安全测试目的而设计和开发。旨在为安全研究人员、学术界人士及技术爱好者提供一个探索和实践网络通信技术的工具。
@@ -25,7 +25,7 @@
 
 ## 🔥 风险提示
 - 通过提交虚假的节点配置给订阅服务，避免节点配置信息泄露。
-- 另外，您也可以选择自行部署 [WorkerVless2sub 订阅生成服务](https://github.com/cmliu/WorkerVless2sub)，这样既可以利用订阅生成器的便利。
+
    
 ## 💡 如何使用?
 ### ⚙️ Workers 部署方法 
@@ -75,8 +75,7 @@
    - 例如 `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` Clash订阅格式，适用OpenClash等。
    - 例如 `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb` singbox订阅格式，适用singbox等。
    
-3. 给 Pages绑定 CNAME自定义域：[视频教程](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
-   - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
+3. 给 Pages绑定 CNAME自定义域   - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
    - 填入你的自定义次级域名，注意不要使用你的根域名，例如：
      您分配到的域名是 `fuck.cloudns.biz`，则添加自定义域填入 `lizi.fuck.cloudns.biz`即可；
    - 按照 CF 的要求将返回你的域名DNS服务商，添加 该自定义域 `lizi`的 CNAME记录 `edgetunnel.pages.dev` 后，点击 `激活域`即可。
@@ -128,14 +127,14 @@
 
 | 变量名 | 示例 | 必填 | 备注 | YT |
 |--------|---------|-|-----|-----|
-| UUID | `90cd4a77-141a-43c9-991b-08263cfe9c10` |✅| 可输入任意值(非UUIDv4标准的值会自动切换成动态UUID) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s) |
+| UUID | `90cd4a77-141a-43c9-991b-08263cfe9c10` |✅| 可输入任意值(非UUIDv4标准的值会自动切换成动态UUID) | |
 | KEY | `token` |❌| 动态UUID秘钥，使用变量`KEY`的时候，将不再启用变量`UUID`|  |
 | TIME | `7` |❌| 动态UUID有效时间(默认值:`7`天)|  |
 | UPTIME | `3` |❌| 动态UUID更新时间(默认值:北京时间`3`点更新) |  |
 | SCV | `false`或`0` |❌| 是否跳过TLS证书验证(默认`true`开启跳过证书验证) |  |
-| PROXYIP | `proxyip.cmliussss.net:443` |❌| 备选作为访问CFCDN站点的代理节点(支持自定义ProxyIP端口, 支持多ProxyIP, ProxyIP之间使用`,`或`换行`作间隔) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s) |
+| PROXYIP | `proxyip.cmliussss.net:443` |❌| 备选作为访问CFCDN站点的代理节点(支持自定义ProxyIP端口, 支持多ProxyIP, ProxyIP之间使用`,`或`换行`作间隔) | v=s91zjpw3-P8&t=166s) |
 | HTTP  | `user:password@127.0.0.1:8080`或`127.0.0.1:8080` |❌| 优先作为访问CFCDN站点的HTTP代理(支持多HTTP代理之间使用`,`或`换行`作间隔) | |
-| SOCKS5  | `user:password@127.0.0.1:1080`或`127.0.0.1:1080` |❌| 优先作为访问CFCDN站点的SOCKS5代理(支持多socks5, socks5之间使用`,`或`换行`作间隔) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s) |
+| SOCKS5  | `user:password@127.0.0.1:1080`或`127.0.0.1:1080` |❌| 优先作为访问CFCDN站点的SOCKS5代理(支持多socks5, socks5之间使用`,`或`换行`作间隔) | v=s91zjpw3-P8&t=826s) |
 | GO2SOCKS5  | `blog.cmliussss.com`,`*.ip111.cn`,`*google.com` |❌| 设置`SOCKS5`或`HTTP`变量之后，可设置强制使用socks5访问名单(设置为`*`可作为全局代理) ||
 | ADD | `icook.tw:2053#官方优选域名` |❌| 本地优选TLS域名/优选IP(支持多元素之间`,`或`换行`作间隔) ||
 | ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
@@ -146,19 +145,19 @@
 | CSVREMARK | `1` |❌| CSV备注所在列偏移量 ||
 | TGTOKEN | `6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXX` |❌| 发送TG通知的机器人token | 
 | TGID | `6946912345` |❌| 接收TG通知的账户数字ID | 
-| SUB | `SUB.cmliussss.net` | ❌ | 优选订阅生成器域名 | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1193s) |
-| SUBAPI | `SUBAPI.cmliussss.net` |❌| clash、singbox等 订阅转换后端 | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1446s) |
-| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌| clash、singbox等 订阅转换配置文件 | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
+| SUB | `SUB.cmliussss.net` | ❌ | 优选订阅生成器域名 ||
+| SUBAPI | `SUBAPI.cmliussss.net` |❌| clash、singbox等 订阅转换后端 | |
+| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌| clash、singbox等 订阅转换配置文件 | 
 | SUBEMOJI | `false` |❌| 订阅转换是否启用Emoji(默认`true`) | |
 | SUBNAME | `edgetunnel` |❌| 订阅名称 | |
-| RPROXYIP | `false` |❌| 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)| [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1816s) |
+| RPROXYIP | `false` |❌| 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)||
 | URL302 | `https://t.me/CMLiussss` |❌| 主页302跳转(支持多url, url之间使用`,`或`换行`作间隔, 小白别用) |  |
 | URL | `https://blog.cmliussss.com` |❌| 主页反代伪装(支持多url, url之间使用`,`或`换行`作间隔, 乱设容易触发反诈) |  |
 | CFPORTS | `2053`,`2096`,`8443` |❌| CF账户标准端口列表 |  |
 
 ## ❗ 注意事项
 
-### 开启在线编辑优选列表 [视频教程](https://www.youtube.com/watch?v=tKe9xUuFODA&t=630s)
+### 开启在线编辑优选列表 
 - 绑定**变量名称**为`KV`的**KV命名空间**，即可在无`SUB`的前提下，在配置页实现在线编辑`ADD`与`ADDAPI`优选列表；
 
 ### **关于`KEY`与`UUID`：**
